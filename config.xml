@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.mecom.bt"
-        version   = "1.11.0">
+        id        = "com.wemobilise.aarhus.digital"
+        version   = "1.0.1">
 
-    <name>BT</name>
+    <name>Århus Onsdag Digital Avis</name>
 
     <description>
-        BT
+        Århus Onsdag Digital Avis
     </description>
 
     <author href="http://www.berlingskemedia.dk/" email="mobil@berlingske.dk">
