@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <title>bt.dk</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+
+            // Wait for Cordova to load
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // Run functions when device is ready
+            function onDeviceReady() {
+
+                checkNetworkConnection();
+            }
+
+            // Check internet connection
+            function checkNetworkConnection () {
+
+                if (navigator.connection.type != "none") {
+                    showContent ("m.bt.dk");
+                } else {
+
+                    // Alerting native notification
+                    navigator.notification.alert(
+                                                 'Forsøg venligst igen',    // message
+                                                 checkNetworkConnection,             // callback function
+                                                 'Ingen forbindelse',       // title
+                                                 'Forsøg igen'              // retry button
+                                                 );
+                }
+            }
+
+            // Show content
+            function showContent (url){
+                document.location.href = "http://" + url + "/?phonegap=android";
+            }
+            </script>
+    </head>
+    <body>
+    </body>
+</html>
